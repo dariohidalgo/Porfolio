@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion';
-import { Mail, Linkedin, Github, MessageCircle } from 'lucide-react';
+import { Linkedin, Github, MessageCircle } from 'lucide-react';
+import FormMail from './fotmMail';
 
 export default function Contact() {
     return (
@@ -22,19 +23,18 @@ export default function Contact() {
                         Comencemos a hablar sobre tu próximo proyecto. Envía un mensaje y veamos cómo puedo ayudarte a alcanzar tus objetivos tecnológicos.
                     </p>
 
-                    <div className="flex flex-col sm:flex-row gap-4 justify-center relative z-10">
-                        <a
-                            href="mailto:dhidalgo651@gmail.com"
-                            className="inline-flex items-center justify-center px-8 py-4 text-sm font-medium text-background bg-primary rounded-lg hover:bg-primaryHover transition-colors focus:ring-2 focus:ring-primary/50 focus:outline-none"
-                        >
-                            <Mail className="mr-2 h-4 w-4" />
-                            Email
-                        </a>
+                    <div className="flex flex-col gap-6 w-full max-w-md mx-auto relative z-10">
+                        <FormMail />
+
+                        <div className="flex items-center justify-center before:flex-1 before:border-t before:border-surfaceHover after:flex-1 after:border-t after:border-surfaceHover">
+                            <span className="px-4 text-xs text-textMuted uppercase tracking-wider">o contáctame por</span>
+                        </div>
+
                         <a
                             href="https://wa.me/543512481573"
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="inline-flex items-center justify-center px-8 py-4 text-sm font-medium text-textMain bg-surface border border-surfaceHover rounded-lg hover:bg-surfaceHover transition-colors focus:ring-2 focus:ring-surface focus:outline-none"
+                            className="inline-flex items-center justify-center px-8 py-4 text-sm font-medium text-textMain bg-surface border border-surfaceHover rounded-lg hover:bg-surfaceHover transition-colors focus:ring-2 focus:ring-surface focus:outline-none w-full"
                         >
                             <MessageCircle className="mr-2 h-4 w-4 text-primary" />
                             WhatsApp
