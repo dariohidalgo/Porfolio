@@ -65,15 +65,15 @@ export default function Hero() {
                         className="text-5xl md:text-7xl font-bold tracking-tight text-textMain"
                     >
                         Desarrollador Front/End <br className="hidden md:block" />
-                        <span className="inline-grid pt-2">
+                        <span className="inline-grid pt-4">
                             <AnimatePresence>
                                 <motion.span
                                     key={titleIndex}
-                                    initial={{ opacity: 0, y: 20 }}
+                                    initial={{ opacity: 0, y: 25 }}
                                     animate={{ opacity: 1, y: 0 }}
-                                    exit={{ opacity: 0, y: -20 }}
+                                    exit={{ opacity: 0, y: -25 }}
                                     transition={{ duration: 0.5 }}
-                                    className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary col-start-1 row-start-1"
+                                    className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary col-start-1 row-start-1 h-28 md:h-20"
                                 >
                                     {titles[titleIndex]}
                                 </motion.span>
