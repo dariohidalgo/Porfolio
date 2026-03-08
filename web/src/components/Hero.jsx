@@ -1,7 +1,25 @@
-import { motion } from 'framer-motion';
+import { useState, useEffect } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
 import { ArrowRight, Code2 } from 'lucide-react';
 
 export default function Hero() {
+    const titles = [
+        "Construyendo Soluciones",
+        "Diseñando Experiencias",
+        "Escribiendo Código",
+        "Optimizando la Web"
+    ];
+
+    const [titleIndex, setTitleIndex] = useState(0);
+
+    useEffect(() => {
+        const intervalId = setInterval(() => {
+            setTitleIndex((prev) => (prev + 1) % titles.length);
+        }, 3000);
+
+        return () => clearInterval(intervalId);
+    }, []);
+
     return (
         <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20 pb-16 px-4">
 
@@ -47,8 +65,19 @@ export default function Hero() {
                         className="text-5xl md:text-7xl font-bold tracking-tight text-textMain"
                     >
                         Desarrollador Front/End <br className="hidden md:block" />
-                        <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary">
-                            Construyendo Soluciones
+                        <span className="inline-grid pt-2">
+                            <AnimatePresence>
+                                <motion.span
+                                    key={titleIndex}
+                                    initial={{ opacity: 0, y: 20 }}
+                                    animate={{ opacity: 1, y: 0 }}
+                                    exit={{ opacity: 0, y: -20 }}
+                                    transition={{ duration: 0.5 }}
+                                    className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary col-start-1 row-start-1"
+                                >
+                                    {titles[titleIndex]}
+                                </motion.span>
+                            </AnimatePresence>
                         </span>
                     </motion.h1>
 
