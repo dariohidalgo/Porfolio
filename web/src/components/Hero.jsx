@@ -46,7 +46,7 @@ export default function Hero() {
                         transition={{ duration: 0.5, delay: 0.1 }}
                         className="text-5xl md:text-7xl font-bold tracking-tight text-textMain"
                     >
-                        Ingeniero de Software <br className="hidden md:block" />
+                        Desarrollador Front/End <br className="hidden md:block" />
                         <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary">
                             Construyendo Soluciones
                         </span>

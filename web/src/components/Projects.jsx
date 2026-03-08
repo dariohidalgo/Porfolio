@@ -102,9 +102,7 @@ export default function Projects() {
                                             <ExternalLink className="w-4 h-4 mr-2" /> Live Demo
                                         </span>
                                     )}
-                                    <a href="#" className="inline-flex items-center text-sm font-medium hover:text-primary transition-colors text-textMuted">
-                                        <Github className="w-4 h-4 mr-2" /> Código
-                                    </a>
+
                                 </div>
                             </div>
                         </motion.div>
